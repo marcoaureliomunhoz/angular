@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-//meta dados
+//meta dados da classe (decorator)
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -11,6 +11,8 @@ export class AppComponent {
   title = 'Olá Tarefas';
   tarefa = '';
   tarefas = [];
+  dataAtual = new Date();
+
   novaTarefa() {
     this.tarefas.push(this.tarefa);
     this.tarefa = '';

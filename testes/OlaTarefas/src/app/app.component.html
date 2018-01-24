@@ -8,5 +8,9 @@
 
 <h3>Tarefas</h3>
 <ul>
-  <li *ngFor="let item of tarefas">{{item}}</li>
+  <li *ngFor="let item of tarefas">
+    {{item | uppercase}}
+  </li>
 </ul>
+
+<span>Data atual: {{dataAtual | formatoDataBrasil}}</span>
