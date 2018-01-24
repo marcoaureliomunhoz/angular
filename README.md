@@ -38,7 +38,8 @@ Versão | Data Base | Importante
     - **Data Binding**: recurso também presente em aplicações mobile para fazer a ligação "**automática-mágica**" dos dados do componente com a visão (template) do componente.
 - **Diretivas**   
     - Código JavaScript para fornecer comportamentos reutilizáveis em nível de visão. 
-    - Na prática a diretiva é um atributo que pode ser aplicado em elementos/tags HTML e também em componentes.
+    - Na prática a diretiva é um atributo que pode ser aplicado em elementos/tags HTML e também em componentes e que esconde complexidade reutilizável por meio de código JavaScript.
+    - Nos ajuda a extrair tratamentos comportamentais complexos da visão ou de elementos/tags HTML e levá-los para JavaScript e com isso despoluir o nosso HTML de decisões, instruções e códigos JavaScript.
 - **Property Binding**
     - Liga uma propriedade HTML a um dado do componente, tornando a propriedade reativa (observável). Com isso toda vez que alterarmos o dado relacionado/interligado, o Angular atualiza a propriedade automaticamente para nós. Isso é muito útil para aplicação de estilos em resposta as ações dos usuários.
 - **Roteamento (Router)**   
@@ -66,7 +67,8 @@ Versão | Data Base | Importante
     - cria um componente e sua estrutura básica na pasta app e atualiza o módulo raiz da aplicação (app.module.ts).
 - **ng g pipe \<nome-do-pipe>** 
     - cria um pipe e sua estrutura básica.
-
+- **ng g directive \<nome-da-diretira>** 
+    - cria uma diretiva e sua estrutura básica.
 
 --- 
 
