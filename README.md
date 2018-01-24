@@ -45,8 +45,9 @@ Versão | Data Base | Importante
 - **Roteamento (Router)**   
     - Tabela de roteamento.
 - **Serviços (Services)**   
-    - Possui a lógica de negócios dos componentes.
-    - Pode ser injetado em outras classes.
+    - Ideal para tirar dos componentes responsabilidades inerentes ao seu propósito. Ex: (i) abrir comunicação com o servidor para enviar ou receber dados armazenados em banco de dados; (ii) enviar e-mail; (iii) submeter a uma fila algum comando.
+    - Pode ser injetado em outras classes. 
+    - Para que o Angular gerencie as dependências é preciso importar e registrar os serviços no módulo. O registro deve ser feito em **providers**.
 - **Injeção de Dependência**  
     - Recurso presente no framework para permitir desacoplamento, reúso e facilitar testes.  
 - **Módulos (Modules)** 
@@ -69,6 +70,10 @@ Versão | Data Base | Importante
     - cria um pipe e sua estrutura básica.
 - **ng g directive \<nome-da-diretira>** 
     - cria uma diretiva e sua estrutura básica.
+- **ng g service \<nome-do-servico>** 
+    - cria um serviço e sua estrutura básica.
+
+> Em **ng g \<comando> \<nome>**, _g_ significa **generate**.
 
 --- 
 
