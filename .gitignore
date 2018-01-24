@@ -1,0 +1,43 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+testes/**/dist
+testes/**/dist-server
+testes/**/tmp
+testes/**/out-tsc
+
+# dependencies
+testes/**/node_modules
+
+# IDEs and editors
+testes/**/.idea
+testes/**/.project
+testes/**/.classpath
+testes/**/.c9/
+testes/**/*.launch
+testes/**/.settings/
+testes/**/*.sublime-workspace
+
+# IDE - VSCode
+testes/**/.vscode/*
+!testes/**/.vscode/settings.json
+!testes/**/.vscode/tasks.json
+!testes/**/.vscode/launch.json
+!testes/**/.vscode/extensions.json
+
+# misc
+testes/**/.sass-cache
+testes/**/connect.lock
+testes/**/coverage
+testes/**/libpeerconnection.log
+testes/**/npm-debug.log
+testes/**/testem.log
+testes/**/typings
+
+# e2e
+testes/**/e2e/*.js
+testes/**/e2e/*.map
+
+# System Files
+testes/**/.DS_Store
+testes/**/Thumbs.db

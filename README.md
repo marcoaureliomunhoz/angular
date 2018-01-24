@@ -46,6 +46,13 @@ Versão | Data Base | Importante
 - **import FormsModule from '@angular/forms'**
     - Serve para interpolação em formulários [(ngModel)]="campo".
 
+### **Comandos CLI** 
+
+- **ng new <nome_da_aplicacao>**
+    - cria uma pasta com tudo o que é necessário para desenvolver uma aplicação angular.
+- **ng serve** 
+    - expõe a aplicação angular em uma porta local para testes.
+
 --- 
 
 **Fontes**  

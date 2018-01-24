@@ -1,0 +1,12 @@
+<h1>{{title}}</h1>
+
+<label>Tarefa</label><br>
+<input type="text" [(ngModel)]="tarefa">
+<button (click)="novaTarefa()">Nova Tarefa</button>
+
+<br><br>
+
+<h3>Tarefas</h3>
+<ul>
+  <li *ngFor="let item of tarefas">{{item}}</li>
+</ul>
