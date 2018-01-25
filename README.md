@@ -27,7 +27,7 @@ Versão | Data Base | Importante
     - Conceito básico/fundamental do Angular que permite a separação de responsabilidades entre o script do componente e o html do componente.
     - O par de colchetes **[algo]** pede para o Angular ficar observando algo no script e sempre que houver mudanças em algo no script, o HTML seja atualizado automaticamente.
     - O par de parenteses **(algo)** pede para o Angular ficar observando algo no html e sempre que houver mudanças em algo no HTML, o script seja atualizado automaticamente.
-    - A combinação de colchetes com parenteses **[(algo)]** chama-se **two way data binding** e pede para o Angular ficar observando algo em ambos, html e script, e sempre que houver mudanças em "um dos lados" o "outro lado" seja atualizado automaticamente. 
+    - A combinação de colchetes com parenteses **[(algo)]** chama-se **two-way data binding** e pede para o Angular ficar observando algo em ambos, html e script, e sempre que houver mudanças em "um dos lados" o "outro lado" seja atualizado automaticamente. 
 - **Pipes | Transformação e Filtragem** 
     - O Angular já fornece vários pipes de transformadores e de filtragem como UpperCasePipe, LowerCasePipe e DatePipe.
     - Mais pipes aqui: https://angular.io/api?type=pipe.
@@ -59,6 +59,16 @@ Versão | Data Base | Importante
     - Serve para interpolação em formulários [(ngModel)]="campo".
 - **import { HttpModule } from '@angular/http'**
     - Serve para realizar requisições http (ajax) em serviços.
+- **import { RouterModule, Routes } from '@angular/routers'** 
+    - Serve para utilizarmos o módulo de rotas do Angular para navegação.
+
+### **Validando Formulários** 
+
+- ng-pristine <=> ng-dirty
+- ng-untouched <=> ng-touched 
+- ng-valid <=> ng-invalid
+
+Quando pedimos para o Angular observar os elementos de um formulário através de uma diretiva especial **#nomeDiretiva**, para cada elemento o Angular cria no escopo do componente uma instância de com propriedades que indicam se o elemento é válido ou não, se o elemento já foi tocado ou não, se o elemento é virgem ou não e se o elemento possui erros ou não. Para acessar a instância na visão do componente usamos **nomeDiretiva**.
 
 ### **Comandos CLI** 
 
