@@ -77,6 +77,32 @@ Versão | Data Base | Importante
 
 > Em **ng g \<comando> \<nome>**, _g_ significa **generate**.
 
+### **Integrando o Bootstrap** 
+
+Primeiro temos que instalar o bootstrap, suas dependências (jquery e popper.js) e o ngx-bootstrap.
+
+```
+$ npm install jquery --save
+$ npm install popper.js --save
+$ npm install ngx-bootstrap bootstrap --save
+ou 
+$ npm install ngx-bootstrap bootstrap@4.0.0 --save
+```
+
+Depois temos que modificar o arquivo **angular-cli.json** para incluir os caminhos dos frameworks.
+
+```
+"styles": [
+    "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+    "styles.css"
+],
+"scripts": [
+    "../node_modules/jquery/dist/jquery.min.js",
+    "../node_modules/popper.js/dist/popper.min.js",
+    "../node_modules/bootstrap/dist/js/bootstrap.min.js"
+]
+```
+
 --- 
 
 **Fontes**  
