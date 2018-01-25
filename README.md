@@ -27,7 +27,7 @@ Versão | Data Base | Importante
     - Conceito básico/fundamental do Angular que permite a separação de responsabilidades entre o script do componente e o html do componente.
     - O par de colchetes **[algo]** pede para o Angular ficar observando algo no script e sempre que houver mudanças em algo no script, o HTML seja atualizado automaticamente.
     - O par de parenteses **(algo)** pede para o Angular ficar observando algo no html e sempre que houver mudanças em algo no HTML, o script seja atualizado automaticamente.
-    - A combinação de colchetes com parenteses **[(algo)]** pede para o Angular ficar observando algo em ambos, html e script, e sempre que houver mudanças em "um dos lados" o "outro lado" seja atualizado automaticamente. 
+    - A combinação de colchetes com parenteses **[(algo)]** chama-se **two way data binding** e pede para o Angular ficar observando algo em ambos, html e script, e sempre que houver mudanças em "um dos lados" o "outro lado" seja atualizado automaticamente. 
 - **Pipes | Transformação e Filtragem** 
     - O Angular já fornece vários pipes de transformadores e de filtragem como UpperCasePipe, LowerCasePipe e DatePipe.
     - Mais pipes aqui: https://angular.io/api?type=pipe.
@@ -55,8 +55,10 @@ Versão | Data Base | Importante
 
 ### **Pacotes** 
 
-- **import FormsModule from '@angular/forms'**
+- **import { FormsModule } from '@angular/forms'**
     - Serve para interpolação em formulários [(ngModel)]="campo".
+- **import { HttpModule } from '@angular/http'**
+    - Serve para realizar requisições http (ajax) em serviços.
 
 ### **Comandos CLI** 
 

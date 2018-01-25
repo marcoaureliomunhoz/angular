@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <h3><strong>Busca Cep</strong></h3>
+    </div>
+</nav>
+
+<div class="container">
+  <div class="row" style="margin-top: 20px;">
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="cep">Cep</label><br>
+        <input type="text" id="cep" class="form-control" [(ngModel)]="cep">
+      </div>
+    </div>
+  </div>
+  <button type="button" (click)="buscar()" class="btn btn-primary">Buscar</button>
+
+  <br><br>
+
+  <strong>Resultado:</strong>
+  <div>Logradouro: {{cepCompleto.logradouro}}</div>
+  <div>Bairro: {{cepCompleto.bairro}}</div>
+  <div>Localidade: {{cepCompleto.localidade}}</div>
+  <div>UF: {{cepCompleto.uf}}</div>
+</div>
