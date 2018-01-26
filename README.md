@@ -36,6 +36,21 @@ Versão | Data Base | Importante
     - Template: é a parte visual do componente. Na prática é um trecho ou arquivo HTML que representa o componente.
     - **Metadata**: todo componente precisa também de um meta dados. 
     - **Data Binding**: recurso também presente em aplicações mobile para fazer a ligação "**automática-mágica**" dos dados do componente com a visão (template) do componente.
+- **Template Reference Variable**
+    - Recurso que facilita o acesso a elementos HTML dentro dos templates. Temos duas formas de usar o recurso.
+    ```html 
+    //--- 1ª Forma ---
+    //aqui estamos declarando uma variável de nome txtNome no próprio template
+    <input name="nome" [(ngModel)]="nome" #txtNome>
+    //aqui estamos usando a referência e verificando um atributo HTML/DOM
+    <button (click)="salvar()" *ngIf="txtNome.value.length>3">Salvar</button>
+    
+    //--- 2ª Forma ---
+    //aqui estamos declarando uma variável de nome txtNome no próprio template e estamos dizendo para o Angular que o conteúdo dela é a diretiva ngModel que é criada e controlada pelo Angular
+    <input name="nome" [(ngModel)]="nome" #txtNome="ngModel">
+    //aqui estamos usando a referência e verificando uma propriedade do objeto ngModel
+    <button (click)="salvar()" *ngIf="!txtNome.errors">Salvar</button>
+    ```
 - **Diretivas**   
     - Código JavaScript para fornecer comportamentos reutilizáveis em nível de visão. 
     - Na prática a diretiva é um atributo que pode ser aplicado em elementos/tags HTML e também em componentes e que esconde complexidade reutilizável por meio de código JavaScript.
