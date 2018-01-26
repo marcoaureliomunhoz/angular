@@ -124,6 +124,21 @@ Quando pedimos para o Angular observar os elementos de um formulário através d
 
 > Em **ng g \<comando> \<nome>**, _g_ significa **generate**.
 
+### **Elementos de um Projeto criado pelo Angular CLI -> ng new** 
+
+- jasmine: biblioteca base de testes javascript.
+- karma: ferramenta de testes unitários baseada em jasmine.
+- protractor: ferramenta de testes de end-to-end (e2e) baseada em jasmine.
+- angular-cli.json: arquivo de configuração do angular cli.
+- tslint: ferramenta de verificação de sintaxe e boas práticas em arquivos ts.
+- codelyzer: ferramenta de verificação de sintaxe e boas práticas específicas do angular.
+- core-js: biblioteca que possui todo o código javascript para emular ES6, ES7 e ES8.
+- polyfills.ts: arquivo que referencia e importa arquivos javascript (core-js) com códigos de emulação de recursos do ES6, ES7 e ES8 que ainda não são suportados pelos navegadores.
+- tsconfig.json: arquivo de configuração do TypeScript.
+- reflect-metadata: biblioteca usada pelo angular para tratar anotações (decorators).
+- rxjs: biblioteca da Microsoft para programação assíncrona com base em Observables.
+- zone.js: biblioteca para criação de tarefas assíncronas (zonas).
+
 ### **Integrando o Bootstrap** 
 
 Primeiro temos que instalar o bootstrap, suas dependências (jquery e popper.js) e o ngx-bootstrap.
