@@ -1,0 +1,28 @@
+<nav>
+  <div class="nav-wrapper container">
+    <a href="#" class="brand-logo left">Tarefas</a>
+    <ul id="nav-mobile" class="right">
+      <li><a routerLink="/nova-tarefa/0">Nova</a></li>
+      <li><a routerLink="/">Voltar</a></li>
+    </ul>
+  </div>
+</nav>
+<br>
+<div class="container">
+  <table class="highlight bordered">
+    <thead>
+      <tr>
+        <th width="100px">Código</th>
+        <th>Descrição</th>
+        <th width="50px"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of lista" routerLink="/alterar-tarefa/{{item.id}}">
+        <td>{{item.id}}</td>
+        <td>{{item.descricao}}</td>
+        <td><button class="btn-floating waves-effect waves-light red" (click)="remover(item.id)"><i class="material-icons">delete</i></button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
