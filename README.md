@@ -26,7 +26,7 @@ Versão | Data Base | Importante
 - **Binding** 
     - Conceito básico/fundamental do Angular que permite a separação de responsabilidades entre o script do componente e o html do componente.
     - O par de colchetes **[algo]** pede para o Angular ficar observando algo no script e sempre que houver mudanças em algo no script, o HTML seja atualizado automaticamente.
-    - O par de parenteses **(algo)** pede para o Angular ficar observando algo no html e sempre que houver mudanças em algo no HTML, o script seja atualizado automaticamente.
+    - O par de parenteses **(algo)** pede para o Angular ficar observando algo no html e sempre que houver mudanças em algo no HTML, o script seja atualizado automaticamente. É usado para observar eventos.
     - A combinação de colchetes com parenteses **[(algo)]** chama-se **two-way data binding** e pede para o Angular ficar observando algo em ambos, html e script, e sempre que houver mudanças em "um dos lados" o "outro lado" seja atualizado automaticamente. 
 - **Pipes | Transformação e Filtragem** 
     - O Angular já fornece vários pipes de transformadores e de filtragem como UpperCasePipe, LowerCasePipe e DatePipe.
@@ -56,7 +56,16 @@ Versão | Data Base | Importante
     - Na prática a diretiva é um atributo que pode ser aplicado em elementos/tags HTML e também em componentes e que esconde complexidade reutilizável por meio de código JavaScript.
     - Nos ajuda a extrair tratamentos comportamentais complexos da visão ou de elementos/tags HTML e levá-los para JavaScript e com isso despoluir o nosso HTML de decisões, instruções e códigos JavaScript.
 - **Property Binding**
-    - Liga uma propriedade HTML a um dado do componente, tornando a propriedade reativa (observável). Com isso toda vez que alterarmos o dado relacionado/interligado, o Angular atualiza a propriedade automaticamente para nós. Isso é muito útil para aplicação de estilos em resposta as ações dos usuários.
+    - Liga uma propriedade HTML a um dado do componente, tornando a propriedade reativa (observável). Com isso toda vez que alterarmos o dado relacionado/interligado, o Angular atualiza a propriedade automaticamente para nós. Isso é muito útil para aplicação de estilos em resposta as ações dos usuários ou para ligar variáveis do script com atributos dos elementos no template HTML.
+    ```
+    //aqui estamos dizendo para angular observar mudanças na variável telefone dentro do script e atualizar automaticamente no template HTML
+    <input [value]="telefone">
+
+    //uma outra forma de fazer isso é usando interpolação
+    <input value="{{ telefone }}">
+    ```
+- **Event Binding** 
+    - Liga um evento HTML a uma função no script.
 - **Roteamento (Router)**   
     - Tabela de roteamento.
 - **Serviços (Services)**   
