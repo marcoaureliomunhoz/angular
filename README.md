@@ -121,6 +121,10 @@ Quando pedimos para o Angular observar os elementos de um formulário através d
     - cria um serviço e sua estrutura básica.
 - **ng g module \<nome-do-modulo>** 
     - cria um módulo e sua estrutura básica.
+- **ng build** 
+    - gera um "build" de desenvolvimento, ou seja, com o código sem ofuscamento e com css sem minificação.
+- **ng build --prod**
+    - gera um "build" de produção, ou seja, todo o código é ofuscado e os css são minificados.
 
 > Em **ng g \<comando> \<nome>**, _g_ significa **generate**.
 
