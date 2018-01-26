@@ -77,6 +77,17 @@ Versão | Data Base | Importante
 - **import { RouterModule, Routes } from '@angular/routers'** 
     - Serve para utilizarmos o módulo de rotas do Angular para navegação.
 
+### **Módulos** 
+
+Módulos são parecidos com os pacotes do java ou os namespaces do c#, ou seja, são agrupadores.
+
+Metadados
+- declarations: espaço para declaração dos componentes, diretivas e pipes do módulo.
+- exports: espaço para declaração de componentes, diretivas e pipes do módulo que serão exportados (visíveis para os módulos que declararem o módulo).
+- imports: espaço para declaração de módulos externos que são usados no módulo. Para usar um módulo externo precisamos importar primeiro.
+- providers: espaço para declaração dos serviços que são usados no módulo.
+- bootstrap: espaço de declaração do componente principal da aplicação. Esse metadado só deve estar presente no módulo principal da aplicação (app.module.ts).
+
 ### **Validando Formulários** 
 
 - ng-pristine <=> ng-dirty
@@ -99,6 +110,8 @@ Quando pedimos para o Angular observar os elementos de um formulário através d
     - cria uma diretiva e sua estrutura básica.
 - **ng g service \<nome-do-servico>** 
     - cria um serviço e sua estrutura básica.
+- **ng g module \<nome-do-modulo>** 
+    - cria um módulo e sua estrutura básica.
 
 > Em **ng g \<comando> \<nome>**, _g_ significa **generate**.
 
