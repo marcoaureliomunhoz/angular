@@ -41,3 +41,6 @@ testes/**/e2e/*.map
 # System Files
 testes/**/.DS_Store
 testes/**/Thumbs.db
+
+# Node Modules
+testes/**/package-lock.json
