@@ -20,6 +20,7 @@ Versão | Data Base | Importante
 5.2.0 | Janeiro/2018 | 
 5.2.1 | Janeiro/2018 | 
 6.0.0-beta.0 | Janeiro/2018 | 
+6.0.0-beta.7 | Março/2018 | 
 
 ### **Principais Conceitos e Áreas do Angular** 
 
