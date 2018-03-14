@@ -170,6 +170,10 @@ Depois temos que modificar o arquivo **angular-cli.json** para incluir os caminh
 ]
 ```
 
+### **Dependências com Alerta de Segurança**
+
+- ssri
+
 --- 
 
 **Fontes**  
