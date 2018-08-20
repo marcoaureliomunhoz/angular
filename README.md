@@ -365,7 +365,9 @@ export class TarefasRoutingModule {}
 ### **Comandos CLI** 
 
 - **ng new \<nome-da-aplicacao>**
-    - cria uma pasta com tudo o que é necessário para desenvolver uma aplicação angular.
+    - cria uma pasta com tudo o que é necessário para desenvolver uma aplicação angular.  
+- **ng new \<nome-da-aplicacao> --routing**
+    - cria um projeto angular já com arquivo de roteamento.  
 - **ng serve** 
     - expõe a aplicação angular em uma porta local para testes.
 - **ng g component \<nome-do-componente> [--module \<nome-do-modulo>]** 
@@ -386,6 +388,17 @@ export class TarefasRoutingModule {}
     - gera um "build" de produção, ou seja, todo o código é ofuscado e os css são minificados.
 
 > Em **ng g \<comando> \<nome>**, _g_ significa **generate**.
+
+### **Atualizando CLI**
+
+```  
+$ npm uninstall -g @angular/cli
+$ npm cache verify
+$ npm install -g @angular/cli@latest
+```  
+
+Se ocorrer problemas durante a instalação execute *npm cache clean --force* e depois tente instalar novamente.
+
 
 ### **Elementos de um Projeto criado pelo Angular CLI -> ng new** 
 
