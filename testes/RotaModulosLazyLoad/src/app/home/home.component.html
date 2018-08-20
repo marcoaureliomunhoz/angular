@@ -1,0 +1,15 @@
+<nav>
+  <div class="nav-wrapper container">
+      <a href="javascript:void(0)" class="brand-logo left">Rota Módulos</a>
+      <ul id="nav-mobile" class="right">
+        <li><a href="javascript:void(0)" (click)="logout()">Logout</a></li>
+      </ul>
+  </div>
+</nav>
+<br>
+<div class="container">
+  <div class="collection">
+    <a routerLink="/tarefas" [queryParams]="{pagina:1}" class="collection-item center">Tarefas</a>
+    <a routerLink="/usuarios" class="collection-item center">Usuários</a>
+  </div>
+</div>

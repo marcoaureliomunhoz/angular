@@ -1,0 +1,30 @@
+<nav>
+  <div class="nav-wrapper container">
+    <a href="javascript:void(0)" class="brand-logo left">Usuários</a>
+    <ul id="nav-mobile" class="right">
+      <li><a routerLink="/usuarios/0">Novo</a></li>
+      <li><a routerLink="/">Voltar</a></li>
+    </ul>
+  </div>
+</nav>
+<br>
+<div class="container">
+  <table class="highlight bordered" style="margin-bottom:20px">
+    <thead>
+      <tr>
+        <th width="100px">Código</th>
+        <th>Nome</th>
+        <th width="50px"></th>
+        <th width="50px"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of lista" routerLink="/usuarios/{{item.id}}">
+        <td>{{item.id}}</td>
+        <td>{{item.nome}}</td>
+        <td><button class="btn-floating waves-effect waves-light red" (click)="detalhar(item.id)"><i class="material-icons">details</i></button></td>
+        <td><button class="btn-floating waves-effect waves-light red" (click)="remover(item.id)"><i class="material-icons">delete</i></button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
