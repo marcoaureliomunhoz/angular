@@ -438,7 +438,11 @@ Depois temos que modificar o arquivo **angular-cli.json** para incluir os caminh
     "../node_modules/popper.js/dist/popper.min.js",
     "../node_modules/bootstrap/dist/js/bootstrap.min.js"
 ]
-```
+```  
+
+Referências:  
+- https://github.com/valor-software
+
 
 ### **Dependências com Alerta de Segurança**
 
