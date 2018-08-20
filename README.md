@@ -399,7 +399,6 @@ $ npm install -g @angular/cli@latest
 
 Se ocorrer problemas durante a instalação execute *npm cache clean --force* e depois tente instalar novamente.
 
-
 ### **Elementos de um Projeto criado pelo Angular CLI -> ng new** 
 
 - jasmine: biblioteca base de testes javascript.
