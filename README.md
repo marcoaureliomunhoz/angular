@@ -368,7 +368,7 @@ export class TarefasRoutingModule {}
     - cria uma pasta com tudo o que é necessário para desenvolver uma aplicação angular.
 - **ng serve** 
     - expõe a aplicação angular em uma porta local para testes.
-- **ng g component \<nome-do-componente> [--module <nome-do-modulo>]** 
+- **ng g component \<nome-do-componente> [--module \<nome-do-modulo>]** 
     - cria um componente e sua estrutura básica na pasta app e atualiza o módulo raiz da aplicação (app.module.ts) ou na pasta <nome-do-modulo> quando --module é especificado.
 - **ng g pipe \<nome-do-pipe>** 
     - cria um pipe e sua estrutura básica.
