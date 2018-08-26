@@ -9,7 +9,10 @@
     <div class="col-md-4">
       <div class="form-group">
         <label for="cep">Cep</label><br>
-        <input type="text" id="cep" class="form-control" [(ngModel)]="cep">
+        <input type="text" id="cep" class="form-control"
+          [(ngModel)]="cep"
+          (keyup)="cepKeyPressed($event.target.value)"
+        >
       </div>
     </div>
   </div>

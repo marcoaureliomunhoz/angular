@@ -64,6 +64,25 @@ Versão | Data Base | Importante
 
     //uma outra forma de fazer isso é usando interpolação
     <input value="{{ telefone }}">
+
+    //aqui estamos dizendo para o angular observar mudanças na variável de template frm e atualizar no próprio template suas referências. Neste caso, quando o formulários estiver com erros o botão vai ficar desabilitado.
+    <form #frm="ngForm">
+        <button [disabled]="frm.errors" type="submit">Salvar</button>
+    </form>
+    ```
+- **Class Binding** 
+    - Aplica classes à um elemento com base em expressões que avaliam dados do componente. 
+    ```
+    //aqui estamos dizendo para o angular observar o estado do formulário, e se este apresentar erros o angular deve aplicar duas classes do bootstrap ao elemento.
+    <div [class.has-error]="frm.errors" 
+         [class.has-feedback="frm.errors"]>...</div>
+    //uma outra forma de aplicar classes de estilização em elementos é essa:
+    <div ngClass="{
+            'has-error' = frm.errors,
+            'has-feedback' = frm.errors
+         }">...</div>
+    //outra forma:
+    <div [ngClass]="aplicaCssErro(frm)">...</div>
     ```
 - **Event Binding** 
     - Liga um evento HTML a uma função no script.
@@ -100,11 +119,11 @@ Metadados
 
 ### **Validando Formulários** 
 
-- ng-pristine <=> ng-dirty
-- ng-untouched <=> ng-touched 
-- ng-valid <=> ng-invalid
+- ng-pristine <=> ng-dirty (indica se o componente foi alterado ou não)
+- ng-untouched <=> ng-touched (indica se o componente foi visitado ou não)
+- ng-valid <=> ng-invalid (indica se o componente é válido ou não)
 
-Quando pedimos para o Angular observar os elementos de um formulário através de uma diretiva especial **#nomeDiretiva**, para cada elemento o Angular cria no escopo do componente uma instância de com propriedades que indicam se o elemento é válido ou não, se o elemento já foi tocado ou não, se o elemento é virgem ou não e se o elemento possui erros ou não. Para acessar a instância na visão do componente usamos **nomeDiretiva**.
+Quando pedimos para o Angular observar os elementos de um formulário através de uma diretiva especial **#nomeDiretiva**, para cada elemento o Angular cria no escopo do componente uma instância com propriedades que indicam se o elemento é válido ou não, se o elemento já foi visitado ou não, se o elemento já foi alterado ou não e se o elemento possui erros ou não. Para acessar a instância na visão do componente usamos **nomeDiretiva**.
 
 ### **Tipos de Rotas** 
 
@@ -453,9 +472,12 @@ Referências:
 **Fontes**  
 
 - https://angular.io (Versão 2x, 4x, 5x, 6x, ...)
+- https://update.angular.io (tudo sobre atualizações de versão)
 - https://github.com/angular
 - https://github.com/angular/angular/releases 
 - https://angularjs.org (Versão 1x)
 - https://www.youtube.com/user/Loianeg (Loiane Groner) 
+- https://loiane.com
 - https://www.youtube.com/user/wesleywillians (Luis Carlos / Wesley Willians - Code.Education / School of Net)
 - https://www.youtube.com/user/rodrigobranas (Rodrigo Branas)
+- https://github.com/yuyang041060120/ng2-validation (Validators customizados)

@@ -1,0 +1,24 @@
+<div class="panel-buttons-top">
+  <button class="btn btn-primary">Novo</button>
+</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col" style="width: 100px"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let curso of cursos" >
+      <th scope="row">{{ curso.id }}</th>
+      <td>{{ curso.nome }}</td>
+      <td>
+        <div class="panel-buttons">
+          <button class="btn btn-info">Alterar</button>
+          <button class="btn btn-danger">Excluir</button>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>

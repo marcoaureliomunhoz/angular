@@ -12,7 +12,7 @@ import { Cep } from './cep';
 export class AppComponent {
 
   cep: string;
-  cepCompleto: Cep;
+  cepCompleto: Cep = new Cep();
 
   constructor(private cepService: CepService) { }
 
@@ -28,8 +28,24 @@ export class AppComponent {
           this.cepCompleto.localidade = resposta.localidade;
         })
         .catch(() => {
-          alert('Ops! Algo errado na busca.');
+          console.log('Ops! Algo errado na busca.');
         });
+  }
+
+  cepKeyPressed(valor) {
+    /*console.log('cep: ', valor);*/
+    /*console.log('length: ', valor.length);*/
+    if (valor.length >= 8) {
+      this.cep = this.cep.replace(/\D/g, '');
+      if (this.cep !== '') {
+        const validaCep = /^[0-9]{8}$/;
+        if (validaCep.test(this.cep)) {
+          this.buscar();
+        }
+      }
+    } else {
+      this.cepCompleto = new Cep();
+    }
   }
 
 }

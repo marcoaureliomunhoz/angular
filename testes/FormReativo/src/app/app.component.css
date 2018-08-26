@@ -1,0 +1,13 @@
+nav a {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+nav a.active {
+  background-color: #fff;
+}
+
+.navbar-brand {
+  color: #59119b;
+  font-weight: bold;
+}

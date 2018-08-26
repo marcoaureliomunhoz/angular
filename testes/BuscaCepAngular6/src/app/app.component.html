@@ -1,0 +1,12 @@
+<label for="cep">Cep</label><br>
+<input type="text" id="cep" [(ngModel)]="cep">
+<hr>
+<button type="button" (click)="buscar()">Buscar</button>
+
+<br><br>
+
+<strong>Resultado:</strong>
+<div>Logradouro: {{cepCompleto.logradouro}}</div>
+<div>Bairro: {{cepCompleto.bairro}}</div>
+<div>Localidade: {{cepCompleto.localidade}}</div>
+<div>UF: {{cepCompleto.uf}}</div>

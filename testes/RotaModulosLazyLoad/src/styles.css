@@ -3,3 +3,12 @@
 table.highlight tbody tr {
   cursor: pointer;
 }
+
+.ng-touched.ng-invalid:not(form) {
+  border-bottom: 1px solid red;
+}
+
+.cs-form-alert {
+  color: red;
+  margin-left: 10px;
+}

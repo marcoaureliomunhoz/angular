@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+%panel-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.panel-buttons {
+  @extend %panel-buttons;
+}
+
+.panel-buttons-top {
+  @extend %panel-buttons;
+  margin-bottom: 10px;
+}
+
+.panel-buttons-bottom {
+  @extend %panel-buttons;
+  margin-top: 10px;
+}

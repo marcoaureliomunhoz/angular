@@ -28,6 +28,16 @@ export class CadTarefaComponent implements OnInit, OnDestroy, IFormCanDeactivate
     }
   }
 
+  submit(form) {
+    console.log('CadTarefaComponent submit');
+    console.log(form);
+    if (form.value.descricao.length >= 3) {
+      this.tarefas.salvar(new Tarefa(0, form.value.descricao, form.value.detalhes));
+      this.formAlteracoes = 0;
+      this.router.navigate(['tarefas']); /*roteamento imperativo*/
+    }
+  }
+
   constructor(
     private router: Router,
     private route: ActivatedRoute,

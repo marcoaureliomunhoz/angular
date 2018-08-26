@@ -9,7 +9,7 @@
 <br>
 <div class="container">
   <div class="row">
-      <form class="col s12">
+      <form #f="ngForm" (ngSubmit)="submit(f)" class="col s12">
         <div class="row">
           <div class="input-field col s3">
             <input placeholder="Código" type="text" readonly
@@ -25,7 +25,10 @@
                   (input)="onInput()"
                   #descricao="ngModel"
             >
-            <label for="descricao" class="active">Descrição (no mínimo 3 caracteres)</label>
+            <label for="descricao" class="active">
+              Descrição (no mínimo 3 caracteres)
+              <span class="cs-form-alert" *ngIf="!descricao.valid && descricao.touched">A descrição é obrigatória.</span>
+            </label>
           </div>
         </div>
         <div class="row">
@@ -37,16 +40,18 @@
                     (input)="onInput()"
                     #detalhes="ngModel"
               ></textarea>
-              <label for="detalhes" class="active">Detalhes (no mínimo 3 caracteres)</label>
+              <label for="detalhes" class="active">
+                Detalhes (no mínimo 3 caracteres)
+                <span class="cs-form-alert" *ngIf="!detalhes.valid && detalhes.touched">Os detalhes são obrigatórios.</span>
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12">
+              <button class="btn" type="submit"                    [disabled]="descricao.errors || detalhes.errors">Submit</button>
+              <button class="btn" type="button" (click)="salvar()" *ngIf="!descricao.errors && !detalhes.errors">Salvar</button>
             </div>
           </div>
       </form>
-      <div class="col s12">
-          <div class="row">
-            <div class="col s12">
-                <button class="btn" (click)="salvar()" *ngIf="!descricao.errors && !detalhes.errors">Salvar</button>
-            </div>
-          </div>
-      </div>
     </div>
 </div>
