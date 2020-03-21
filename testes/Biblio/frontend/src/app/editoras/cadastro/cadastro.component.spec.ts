@@ -93,7 +93,7 @@ describe('CadastroComponent', () => {
     expect(podeSalvar).toBe(true);
   });
 
-  it('não deve enviar para servidor cadastro inválido', async () => {
+  it('não deve enviar para servidor cadastro inválido', () => {
     // Arrange
     setupForm(component.form, cadastroInvalido);
 
@@ -105,7 +105,7 @@ describe('CadastroComponent', () => {
     expect(spyInserirEditora).not.toHaveBeenCalled();
   });
 
-  it('deve alertar usuário sobre cadastro inválido', async () => {
+  it('deve alertar usuário sobre cadastro inválido', () => {
     // Arrange
     // const windowAlert = window.alert;
     window.alert = jasmine.createSpy();
