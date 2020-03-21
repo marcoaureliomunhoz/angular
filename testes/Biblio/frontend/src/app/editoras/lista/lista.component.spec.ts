@@ -46,7 +46,7 @@ describe('ListaComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('deve obter a lista esperada', () => {
+  it('deve obter a lista esperada', (done) => {
     // Arrange
     // ...
 
@@ -56,10 +56,11 @@ describe('ListaComponent', () => {
     // Assert
     fixture.whenStable().then(() => {
       expect(component.lista).toEqual(copia);
+      done();
     });
   });
 
-  it('deve renderizar a quantidade de editoras da lista esperada', () => {
+  it('deve renderizar a quantidade de editoras da lista esperada', (done) => {
     // Arrange
     // ...
 
@@ -75,10 +76,11 @@ describe('ListaComponent', () => {
       // console.log(elementos);
 
       expect(elementos.length).toEqual(editoras.length);
+      done();
     });
   });
 
-  it('deve renderizar as editoras da lista esperada', () => {
+  it('deve renderizar as editoras da lista esperada', (done) => {
     // Arrange
     // ...
 
@@ -104,6 +106,7 @@ describe('ListaComponent', () => {
       // console.log(tipados);
 
       expect(tipados).toEqual(editoras);
+      done();
     });
   });
 
